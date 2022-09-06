@@ -1,10 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { createApp } from 'vue';
 import App from '@/App.vue';
-// import AppCard from '@/components/AppCard.vue';
+import router from './router';
 
 const app = createApp(App);
-// app.component('AppCard', AppCard); // 전역 등록
+app.use(router);
 app.mount('#app');
 
 import 'bootstrap/dist/js/bootstrap.js';

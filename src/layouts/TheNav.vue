@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <RouterLink class="navbar-brand" to="/home">Navbar</RouterLink>
         <button
           class="navbar-toggler"
           type="button"
@@ -17,32 +17,31 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+              <RouterLink
+                class="nav-link"
+                aria-current="page"
+                to="/home"
+                active-class="active"
+                >Home</RouterLink
               >
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
+              <RouterLink
+                class="nav-link"
+                aria-current="page"
+                to="/link"
+                active-class="active"
+                >Link</RouterLink
+              >
+            </li>
+            <li class="nav-item">
+              <RouterLink
+                class="nav-link"
+                aria-current="page"
+                to="/posts"
+                active-class="active"
+                >게시판</RouterLink
+              >
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -63,9 +62,13 @@
 </template>
 
 <script>
+import { ref } from 'vue';
+
 export default {
   setup() {
-    return {};
+    const clicked = ref('1');
+
+    return { clicked };
   },
 };
 </script>

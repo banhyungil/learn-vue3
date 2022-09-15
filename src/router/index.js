@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '@/views/HomeView.vue';
-import LinkView from '@/views/LinkView.vue';
+import LecturesView from '@/views/LecturesView.vue';
 import PostList from '@/views/posts/PostListView.vue';
 
 const routes = [
@@ -10,9 +10,21 @@ const routes = [
     component: HomeView,
   },
   {
-    path: '/link',
-    name: 'LinkView',
-    component: LinkView,
+    path: '/lectures',
+    name: 'LecturesView',
+    component: LecturesView,
+    children: [
+      {
+        path: '',
+        name: 'AppWatch',
+        component: () => import('@/lectures/15/AppWatch.vue'),
+      },
+      {
+        path: '',
+        name: 'AppWatchEffect',
+        component: () => import('@/lectures/15/AppWatchEffect.vue'),
+      },
+    ],
   },
   {
     path: '/posts',

@@ -29,6 +29,15 @@
               <RouterLink
                 class="nav-link"
                 aria-current="page"
+                to="/main"
+                active-class="active"
+                >test</RouterLink
+              >
+            </li>
+            <li class="nav-item">
+              <RouterLink
+                class="nav-link"
+                aria-current="page"
                 to="/lectures"
                 active-class="active"
                 >lectures</RouterLink

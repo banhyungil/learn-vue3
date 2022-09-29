@@ -34,8 +34,8 @@ export default {
 
     const getter = () => x.value + y.value;
     watch(getter, (newValue, oldValue) => {
-      console.log('newValue:', newValue);
-      console.log('oldValue:', oldValue);
+      console.log('x + y newValue:', newValue);
+      console.log('x + y oldValue:', oldValue);
     });
 
     const name = ref('ban');

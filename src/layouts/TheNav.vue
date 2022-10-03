@@ -20,6 +20,15 @@
               <RouterLink
                 class="nav-link"
                 aria-current="page"
+                to="/devExtreme"
+                active-class="active"
+                >DevExtreme</RouterLink
+              >
+            </li>
+            <li class="nav-item">
+              <RouterLink
+                class="nav-link"
+                aria-current="page"
                 to="/home"
                 active-class="active"
                 >Home</RouterLink

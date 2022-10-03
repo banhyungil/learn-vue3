@@ -2,8 +2,14 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '@/views/HomeView.vue';
 import LecturesView from '@/views/LecturesView.vue';
 import PostList from '@/views/posts/PostListView.vue';
+import DevExtremeTestView from '@/views/DevExtremeTestView.vue';
 
 const routes = [
+  {
+    path: '/devExtreme',
+    name: 'DevExtremeTest',
+    component: DevExtremeTestView,
+  },
   {
     path: '/home',
     name: 'HomeView',
